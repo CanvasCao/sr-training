@@ -1,0 +1,25 @@
+{
+  "responses": [
+    {
+      "is": {
+        "statusCode": 200,
+        "body": "<%- stringify(filename, './data/items.json') %>",
+        "headers": {
+          "Access-Control-Allow-Origin": "*"
+        }
+      }
+    }
+  ],
+  "predicates": [
+    {
+      "and": [
+        {
+          "equals": {
+            "path": "/items",
+            "method": "GET"
+          }
+        }
+      ]
+    }
+  ]
+}
